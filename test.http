@@ -1,0 +1,28 @@
+
+@api_key = sk-or-v1-96xxxxx
+
+
+@prompt = What is the weather today in Paris in celsius?
+@prompt = Multiply 2 and 3 and return the result
+@prompt = Get me the the revenue for MagicVolo only for the March of 2023
+
+POST http://localhost:8080/api/chat
+Accept: application/json
+Authorization: Bearer {{api_key}}
+
+{
+    "model": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "messages": [
+      {
+        "role": "user",
+        "content": "{{prompt}}"
+      }
+    ]
+}
+
+
+####
+https://wttr.in/Paris?format=3
+
+###
+https://wttr.in/Paris?format=%25f
