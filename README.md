@@ -24,8 +24,6 @@ The API will be available at `http://localhost:8080`.
 
 ## API Documentation
 
-## API Documentation
-
 ### Request Body (`/api/chat`)
 
 The API accepts a JSON payload with the following structure:
@@ -41,53 +39,6 @@ The API accepts a JSON payload with the following structure:
     {
       "role": "user",
       "content": "What is the capital of France?"
-    }
-  ],
-  "tools": [
-    {
-      "type": "function",
-      "function": {
-        "name": "calculate_revenue",
-        "description": "Calculates revenue for a given year and month.",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "year": { "type": "integer", "description": "The year." },
-            "month": { "type": "integer", "description": "The month (1-12)." }
-          },
-          "required": ["year", "month"]
-        }
-      }
-    },
-    {
-      "type": "function",
-      "function": {
-        "name": "get_current_weather",
-        "description": "Gets the current weather for a given location.",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "location": { "type": "string", "description": "The location (e.g., London)." },
-            "format": { "type": "string", "description": "The format (e.g., '3')." }
-          },
-          "required": ["location", "format"]
-        }
-      }
-    },
-    {
-      "type": "function",
-      "function": {
-        "name": "multiply_two_numbers",
-        "description": "Multiplies two numbers.",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "number1": { "type": "number", "description": "The first number." },
-            "number2": { "type": "number", "description": "The second number." }
-          },
-          "required": ["number1", "number2"]
-        }
-      }
     }
   ]
 }
@@ -127,8 +78,6 @@ The API returns a JSON payload with the following structure:
 - `get_current_weather(location: string, format: string)`: Gets current weather.
 - `multiply_two_numbers(number1: number, number2: number)`: Multiplies two numbers.
 
-
-## Contributing
 
 ## Contributing
 
